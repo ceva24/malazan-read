@@ -1,0 +1,85 @@
+.footer, .header {
+    text-align: center;
+}
+
+@media(min-width: 1200px) {
+    .header { 
+        margin-bottom: 50px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 40px 15px 40px 15px;
+}
+
+.jumbotron {
+    background: url(../images/header.png);
+    background-size: cover;
+}
+
+.content {
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.series {
+    padding: 5px 20px 5px 5px;
+}
+
+.book { 
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media(min-width: 1200px) {
+    .book, .series {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .series {
+        text-align: right;
+    }
+}
+
+.book-main {
+    background-color: #009757;
+    border: 1px solid #006F40;
+}
+
+.book-novel {
+    background-color: #D9EDF7;
+    border: 1px solid #B0DAEE;
+}
+
+.book-tales {
+    background-color: #FF99CC;
+    border: 1px solid #FF6CB6;
+}
+
+.book-kharkanas {
+    background-color: #FF9900;
+    border: 1px solid #DF8600;
+}
+
+.book-misc {
+    background-color: #CC99FF;
+    border: 1px solid #BA75FF;
+}
+
+.read {
+    background: url(../images/tick.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
