@@ -13,6 +13,6 @@ function setProgressBarValue() {
     }
 
     $("#read-percent-progress-bar").attr("aria-valuenow", percent);
-    $("#read-percent-progress-bar").css("width", (percent == 0 ? 2 : percent) + "%");
+    $("#read-percent-progress-bar").css("width", (percent < 2 ? 2 : percent) + "%");
     $("#read-percent-progress-bar").html(percent + "%");
 }
