@@ -83,3 +83,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.unreleased {
+    opacity: 0.4;
+}

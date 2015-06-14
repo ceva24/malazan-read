@@ -1,8 +1,10 @@
+$(function () { $('[data-toggle="tooltip"]').tooltip() });
+
 $(setTimeout(function() { setProgressBarValue() }, 500));
 
 function setProgressBarValue() {
 
-    var books = $(".book").length;
+    var books = $(".book").length - $(".unreleased").length;
     var read = $(".read").length;
     var percent = Math.floor((read / books) * 100);
 
