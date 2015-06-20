@@ -72,6 +72,11 @@
     border: 1px solid #DF8600;
 }
 
+.book-ascendancy {
+    background-color: #B84D4D;
+    border: 1px solid #7A0000;
+}
+
 .book-misc {
     background-color: #CC99FF;
     border: 1px solid #BA75FF;
