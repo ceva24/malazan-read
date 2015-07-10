@@ -1,11 +1,24 @@
 $(function () { $('[data-toggle="tooltip"]').tooltip() });
 
-$(setTimeout(function() { setProgressBarValue() }, 500));
+$(setProgressBarAndCounterValues());
 
-function setProgressBarValue() {
+function setProgressBarAndCounterValues() {
 
     var books = $(".book").length - $(".unreleased").length;
     var read = $(".read").length;
+
+    setProgressCounterValue(books, read);
+
+    setTimeout(function() { setProgressBarValue(books, read) }, 500);
+}
+
+function setProgressCounterValue(books, read) {
+
+    $("#read-progress-counter").html(read + " / " + books);
+}
+
+function setProgressBarValue(books, read) {
+
     var percent = Math.floor((read / books) * 100);
 
     switch (percent) {

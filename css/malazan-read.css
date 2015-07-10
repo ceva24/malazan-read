@@ -23,8 +23,17 @@
     font-size: large;
 }
 
+.progress-bar-container {
+    padding-top: 0.2%;
+}
+
+#read-progress-counter {
+    text-align: center;
+}
+
 .title {
     font-weight: bold;
+    text-align: center;
 }
 
 .series {
