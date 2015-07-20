@@ -31,6 +31,16 @@
     text-align: center;
 }
 
+#last-updated {
+    text-align: center;
+    font-size: smaller;
+}
+@media(min-width: 1200px) {
+    #last-updated {
+        text-align: right;
+    }
+}
+
 .title {
     font-weight: bold;
     text-align: center;

@@ -1,6 +1,11 @@
-$(function () { $('[data-toggle="tooltip"]').tooltip() });
+$(function () { 
 
-$(setProgressBarAndCounterValues());
+    $('[data-toggle="tooltip"]').tooltip();
+
+    setProgressBarAndCounterValues();
+
+    setPageLastUpdatedValue();
+});
 
 function setProgressBarAndCounterValues() {
 
@@ -30,4 +35,21 @@ function setProgressBarValue(books, read) {
     $("#read-percent-progress-bar").attr("aria-valuenow", percent);
     $("#read-percent-progress-bar").css("width", (percent < 2 ? 2 : percent) + "%");
     $("#read-percent-progress-bar").html(percent + "%");
+}
+
+function setPageLastUpdatedValue() {
+
+    var lastUpdated = new Date(document.lastModified);
+
+    $("#last-updated").append(formatDate(lastUpdated));
+}
+
+function formatDate(date) {
+
+    var month = (date.getMonth() + 1).toString();
+
+    if (month.length == 1) 
+        month = "0" + month;
+
+    return date.getDate() + "-" + month + "-" + date.getFullYear();
 }
