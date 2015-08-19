@@ -10,31 +10,31 @@ $(function () {
 function setProgressBarAndCounterValues() {
 
     var books = $(".book").length - $(".unreleased").length;
-    var read = $(".read").length;
+    var completed = $(".completed").length;
 
-    setProgressCounterValue(books, read);
+    setProgressCounterValue(books, completed);
 
-    setTimeout(function() { setProgressBarValue(books, read) }, 500);
+    setTimeout(function() { setProgressBarValue(books, completed) }, 500);
 }
 
-function setProgressCounterValue(books, read) {
+function setProgressCounterValue(books, completed) {
 
-    $("#read-progress-counter").html(read + " / " + books);
+    $("#progress-counter").html(completed + " / " + books);
 }
 
-function setProgressBarValue(books, read) {
+function setProgressBarValue(books, completed) {
 
-    var percent = Math.floor((read / books) * 100);
+    var percent = Math.floor((completed / books) * 100);
 
     switch (percent) {
-        case 0   : $("#read-percent-progress-bar").addClass("progress-bar-danger"); break;
-        case 100 : $("#read-percent-progress-bar").addClass("progress-bar-success"); break;
-        default  : $("#read-percent-progress-bar").addClass("progress-bar-info"); break;
+        case 0   : $("#percent-completed-progress-bar").addClass("progress-bar-danger"); break;
+        case 100 : $("#percent-completed-progress-bar").addClass("progress-bar-success"); break;
+        default  : $("#percent-completed-progress-bar").addClass("progress-bar-info"); break;
     }
 
-    $("#read-percent-progress-bar").attr("aria-valuenow", percent);
-    $("#read-percent-progress-bar").css("width", (percent < 4 ? 4 : percent) + "%");
-    $("#read-percent-progress-bar").html(percent + "%");
+    $("#percent-completed-progress-bar").attr("aria-valuenow", percent);
+    $("#percent-completed-progress-bar").css("width", (percent < 4 ? 4 : percent) + "%");
+    $("#percent-completed-progress-bar").html(percent + "%");
 }
 
 function setPageLastUpdatedValue() {

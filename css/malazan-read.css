@@ -27,7 +27,7 @@
     padding-top: 0.2%;
 }
 
-#read-progress-counter {
+#progress-counter {
     text-align: center;
 }
 
@@ -101,7 +101,7 @@
     border: 1px solid #BA75FF;
 }
 
-.read {
+.completed {
     background: url(../images/tick.png);
     background-size: 100px;
     background-repeat: no-repeat;
