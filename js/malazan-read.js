@@ -33,7 +33,7 @@ function setProgressBarValue(books, read) {
     }
 
     $("#read-percent-progress-bar").attr("aria-valuenow", percent);
-    $("#read-percent-progress-bar").css("width", (percent < 2 ? 2 : percent) + "%");
+    $("#read-percent-progress-bar").css("width", (percent < 4 ? 4 : percent) + "%");
     $("#read-percent-progress-bar").html(percent + "%");
 }
 
