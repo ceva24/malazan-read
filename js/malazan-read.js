@@ -46,10 +46,13 @@ function setPageLastUpdatedValue() {
 
 function formatDate(date) {
 
-    var month = (date.getMonth() + 1).toString();
+    var day = formatDatePart(date.getDate().toString());
+    var month = formatDatePart((date.getMonth() + 1).toString());
 
-    if (month.length == 1) 
-        month = "0" + month;
+    return day + "-" + month + "-" + date.getFullYear();
+}
 
-    return date.getDate() + "-" + month + "-" + date.getFullYear();
+function formatDatePart(part) {
+
+    return (part.length === 1) ? "0" + part : part;
 }
