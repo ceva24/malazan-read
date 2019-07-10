@@ -96,6 +96,11 @@
     border: 1px solid #7A0000;
 }
 
+.book-witness {
+    background-color: #AC7339;
+    border: 1px solid #4D3319;
+}
+
 .book-misc {
     background-color: #CC99FF;
     border: 1px solid #BA75FF;
